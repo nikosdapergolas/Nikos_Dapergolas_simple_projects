@@ -1,3 +1,8 @@
+#--EXPLANATION--
+#   This is a program that takes as input from the user a number n,
+#   and the program outputs a closed Euler road for the full graph Kn
+#   where Kn is a graph that has M nodes, and every node has M-1 edges
+
 import networkx as nx
 import matplotlib.pyplot as plt
 import copy

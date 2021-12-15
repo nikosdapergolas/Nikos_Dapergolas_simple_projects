@@ -1,3 +1,87 @@
+/*
+        Data structures 1st Assignment 2020-2021
+
+As part of the work you are asked to write a program in C ++ which will solve the problem
+which follows.
+A set of k linear lists Li, i = 0, 1, 2, ..., k-1 is given. As part of the work should be
+use the linked representation for linear lists. See details for details
+Chapter 3.4 of the book "Data Structures, Algorithms and Applications in C ++".
+The data at each node for all Li lists consists of an integer. Is not
+it is necessary that all lists contain the same number of nodes, while the same is allowed to appear
+number more times in each list. However, the use of ready-made structures is not allowed
+data provided by C ++ (C ++ Containers).
+
+The purpose of the program you will create is to create a new output list in which you will
+place the Li elements that appear in at least half of the lists. Any such
+item should only appear once in the output list and all list items
+output should be sorted in ascending order.
+
+At the end of the program the initial Li lists do not have to be in the same
+situation in which they were at the beginning of the program. You are allowed to remove
+any items you want from each Li list or rearrange items within each Li list by
+the execution time of the algorithm. However, you are not allowed to edit Li lists from
+before, e.g. you are not allowed to sort the lists at the beginning of the program.
+
+The fact that you are allowed to modify the Li lists and that the output list must be
+sorted allows you to optimize your algorithm by reducing it
+the number of comparisons required until the final output of the output list is possible.
+Try to think of and implement such optimizations in your algorithm.
+
+The following figure is given to clarify details. For example, although the number 11
+appears several times in total, but only appears in two lists (less than half)
+and so should not be included in the output list. Instead, the number 33 only appears
+three times, but it appears in three different lists (more than half) and so it should
+to be included in the output list. Finally, notice that the items in the output list are
+classified.
+
+Implementation issues:
+- The number k of lists should be read by your program at a time
+execution. Therefore, the structure that will store the entire list of Li should
+is dynamically constructed at runtime.
+- Then your program will have to build the lists. It should be for everyone
+list Li to specify its size (the number of nodes it will consist of) and for
+each node must specify the number it will contain as a given. For this purpose
+a random number generator can be used. C ++ offers a set of classes and
+methods for this purpose (see https://www.cplusplus.com/reference/random). To
+to use these features you should:
+
+Include <random> and <functional> header files in your program:
+#include <random>
+#include <functional>
+
+o Define a random number generator:
+std :: default_random_engine generator;
+
+o Define the allowable limits and the distribution for the random generated
+numbers. With the following statements we ask for the size of each list to
+use a uniform distribution and the numbers produced are integers
+in the interval [100, 200] (ie the size of each list should be from 100 to 200
+elements), while for the number that will contain each node we ask again uniform
+distribution and the numbers generated to be integers in space
+[0, 50]. You are free to change these limits:
+
+std :: uniform_int_distribution <int> list_size_distribution (100, 200);
+std :: uniform_int_distribution <int> data_element_distribution (0, 50);
+
+o For ease of use you can "tie" together the random number generator with
+desired distribution:
+auto random_list_size = std :: bind (list_size_distribution, generator);
+auto random_element = std :: bind (data_element_distribution, generator);
+
+o Each time you call random_list_size () and random_element () you will
+a random number is generated based on the distribution and limits you have set.
+E.g. the following calls generate a random number for the size of a
+list in the interval [100, 200] and a random number in the interval [0, 50] that
+can be used as data for a node in a list:
+int list_size = random_list_size ();
+int data_element = random_element ();
+
+- As mentioned above, from the moment that the using will be created using random numbers
+Li lists are not allowed to be edited unless your algorithm for
+the output list construction.
+
+*/
+
 #include <iostream>
 #include <vector>
 #include <stdlib.h>

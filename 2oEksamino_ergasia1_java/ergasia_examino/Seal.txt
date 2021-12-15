@@ -1,0 +1,6 @@
+Code: 004
+Name: Seal
+Species: Mammal
+Weight: 202
+Max age: 18
+--------------------------------------

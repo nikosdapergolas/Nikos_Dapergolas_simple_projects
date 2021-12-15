@@ -1,0 +1,6 @@
+Code: 002
+Name: Prrot
+Species: Bird
+Weight: 10
+Max age: 90
+--------------------------------------

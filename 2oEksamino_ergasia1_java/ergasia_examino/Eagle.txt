@@ -1,0 +1,6 @@
+Code: 006
+Name: Eagle
+Species: Bird
+Weight: 7
+Max age: 20
+--------------------------------------

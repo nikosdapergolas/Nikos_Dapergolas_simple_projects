@@ -1,0 +1,6 @@
+Code: 005
+Name: Snake
+Species: Reptile
+Weight: 97
+Max age: 9
+--------------------------------------

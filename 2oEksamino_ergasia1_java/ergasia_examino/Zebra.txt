@@ -1,0 +1,6 @@
+Code: 003
+Name: Zebra
+Species: Mammal
+Weight: 200
+Max age: 30
+--------------------------------------

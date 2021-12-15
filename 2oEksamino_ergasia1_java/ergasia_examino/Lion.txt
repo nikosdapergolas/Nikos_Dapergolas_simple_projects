@@ -1,0 +1,6 @@
+Code: 001
+Name: Lion
+Species: Mammal
+Weight: 250
+Max age: 15
+--------------------------------------

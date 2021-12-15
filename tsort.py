@@ -1,3 +1,6 @@
+#--EXPLANATION--
+#   This program tries to find a topological sort of a directional graph without circles
+
 import networkx as nx
 import matplotlib.pyplot as plt
 import random

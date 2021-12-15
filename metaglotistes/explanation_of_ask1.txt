@@ -1,0 +1,5 @@
+Implement a Deterministic Automatic Stack (NAS) that recognizes expressions consisting of the characters ‘x’ and ‘y’, in such a way that:
+- the more ‘x’ characters appear in total, the more ‘y’ characters appear
+in total
+- looking at the expression from left to right, the characters ‘y’ are never more than the ‘x’ characters.
+Print the sequence of steps that led to the recognition (or rejection) of expression.

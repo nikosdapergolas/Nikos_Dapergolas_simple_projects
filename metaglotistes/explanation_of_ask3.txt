@@ -1,0 +1,9 @@
+Grammar is given
+S → (X)
+Χ → ΥΖ
+Υ → α | β | S
+Ζ → * Χ | -Χ | + Χ | e
+Check if the grammar is LL (1). If it is LL (1), then construct a syntax
+top-down parser that recognizes the string or responds negatively as
+to its syntactic correctness. Return the relevant tree and print it.
+Make a demonstration for the expression ((β-α) * (α + β)).

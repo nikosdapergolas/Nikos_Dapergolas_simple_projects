@@ -1,3 +1,8 @@
+# EXPLANATION
+#   In this program, I try to implement the Havel Hakimi algorithm 
+#   The user gives as an input a sequence of numbers that represent the node degree(number of edges leaving from that node)
+#   and the program fives back as an output a graph with this specific sequence 
+
 import networkx as nx
 import matplotlib.pyplot as plt
 import copy
